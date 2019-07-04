@@ -1,0 +1,73 @@
+功能模块
+
+博客，评论，点赞，阅读，用户
+
+博客：博文，博客分类，博客标签
+
+用户：第三方登录（QQ/微博）
+超级管理员：sjl  密码：sjl123456789
+功能模块：Django APP
+
+项目&学习
+
+本地虚拟环境命令：
+C:\Users\Hasee\Desktop>cd C:\Users\Hasee\Desktop\mysite_env
+C:\Users\Hasee\Desktop\mysite_env>Scripts\activate
+
+退出：deactivate
+
+一健转移库 pip freeze > requirments.txt
+
+
+pip install virtualenv
+安装
+
+前端：
+css ：使用css框架 Bootstrap
+Bootstrap：扁平，简洁，响应式，组件齐全，兼容性强。
+
+Bootstrap响应式布局
+栅格参数，
+
+分页
+按月分类...
+
+使用annotate拓展查询字段
+如：
+    #获取博客分类对应的博客数量
+    BlogType.objects.annotate(blog_count = Count('blog'))
+
+博客后台富文本编辑
+1 使用html丰富页面
+安装django-ckeditor
+在models.py 文件下 from ckeditor.fields import RichTextField
+添加图片上传功能
+1安装pillow  2注册应用 'ckeditor_uploader' 3配置sttings 4配置urls 
+参考文档:pipy.python.org
+
+博客阅读简单计数的实现
+1 Blog模型添加数字字段记录，每次有人打开，记录数+1
+
+自定义 什么样才算是阅读1次？？访客？
+1 cookie..
+django中的cookie 类似于一个字典
+
+优化：
+contenttypes  django中默认的有 已注册的app
+
+使用图表显示数据
+折线图（插件,,,)
+hcharts
+https://www.highcharts.com.cn/docs
+
+热门统计
+
+annotate(数据分组统计)
+from django.contrib.contenttypes.fields import GenericRelation
+
+缓存数据，不用每次都需要计算
+
+django 用户注册 ，
+第三方社会化评论插件{有言，多说，畅言，Disqus}
+
+Django评论库  django-comment
